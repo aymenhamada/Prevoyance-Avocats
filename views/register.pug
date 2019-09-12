@@ -1,0 +1,39 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title Spectre sign up form
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Roboto:400,700,300')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css')
+    link(rel='stylesheet', href='/css/login.css')
+  body
+    .signup__container
+      .container__child.signup__thumbnail
+        .thumbnail__logo
+          h1.logo__text Prévoyance Avocat
+        .thumbnail__content.text-center
+        .signup__overlay
+      .container__child.signup__form
+        form(action='/fakeRegister' method="POST")
+          .form-group
+            label(for='username') Nom
+            input#username.form-control(type='text', name='username', required='')
+          .form-group
+            label(for='email') Email
+            input#email.form-control(type='text', name='email', required='')
+          .form-group
+            label(for='password') Mot de passe
+            input#password.form-control(type='password', name='password', required='')
+          .form-group
+            label(for='passwordRepeat') Répeter le mot de passe
+            input#passwordRepeat.form-control(type='password', name='passwordRepeat', required='')
+          .m-t-lg
+            ul.list-inline
+              li
+                input.btn.btn--form(type='submit', value='Insrivez-moi')
+              li
+                a.signup__link(href='/login') Déjà inscrit ?
